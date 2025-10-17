@@ -74,6 +74,29 @@ HAUtogo aims to improve campus efficiency by solving two core issues: locating f
     *Note: Location permissions must be granted on the device for professor tracking to function.*
 
 ---
+---
+
+## ✨ Extra Updates & Quality of Life Improvements
+
+These improvements focus on visual branding, user experience, and enhancing the security and reliability of the authentication flows.
+
+### 1. Brand Integration and Visual Identity 🎨
+* **Logo Implementation:** The official Holy Angel University (HAU) logo and branding have been integrated across the primary application screens and top navigation bars, ensuring brand consistency.
+* **Color Theme:** The application uses a custom theme based on HAU's core colors: **Maroon/Red** (`#550000`) for primary buttons and backgrounds, and **Gold/Yellow** (`#EFBF04`) for selected elements and accents (as seen in `mainPage.dart`).
+
+### 2. Enhanced Authentication Flow and Security 🔒
+The password management process is fully implemented across multiple dedicated screens for maximum security and user guidance:
+
+| Screen / Flow | Purpose | Files Involved |
+| :--- | :--- | :--- |
+| **In-App Password Change** | Allows logged-in users to update their password from the Profile page. | `changePass.dart` |
+| **Password Reset (Forgot)** | Initiates the email-based password reset process. | `forgotPass.dart`, `passReset.dart` |
+| **Set New Password** | Screen where users land from the reset email link to securely set a new password. | `setNewPass.dart` |
+| **Success Feedback** | A dedicated screen that provides clear success confirmation and automatically redirects the user back to the login screen after a successful password update. | `successPassUpd.dart` |
+
+### 3. UI/UX Refinements
+* **Modern Navigation:** The `BottomNavigationBar` in `mainPage.dart` uses a shifting type with a custom rounded border (`ClipRRect` and `Radius.circular(100)`), providing a distinct and modern feel.
+* **Input Reliability:** Implemented robust form validation and state management in login and password screens (`login.dart`, `forgotPass.dart`) to ensure correct inputs and prevent accidental multiple submissions via loading indicators (`CircularProgressIndicator`).
 
 ## 📚 Source Code & Large Files
 
@@ -83,4 +106,4 @@ HAUtogo aims to improve campus efficiency by solving two core issues: locating f
 ### Large Files (APKs, Documentation, Presentation)
 - Compiled Android APKs, project ZIP archives, and related documentation are available for download in the designated Google Drive folder:
   
-  [Download all files here](**[INSERT YOUR GOOGLE DRIVE LINK HERE]**)
+  [Download all files here](https://drive.google.com/drive/folders/1au4Zn_Bt1TGJEYeN3BgZAMmLZeEfKwgi?usp=sharing)
